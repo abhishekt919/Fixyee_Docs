@@ -4,32 +4,57 @@ title: Create a Defect
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 # Create a Defect
 
 <Tabs>
   <TabItem value="manual" label="Manual Creation" default>
+    1. Navigate to **Defects**.
+    2. Click **Create Defect**.
+    3. Select the asset.
+    4. Enter defect details.
+    5. Click **Save**.
 
-1. Navigate to **Defects**.
-2. Click **Create Defect**.
-3. Select the asset.
-4. Enter defect details.
-5. Click **Save**.
+    ### Step 1
+
+<Zoom>
+      <img
+    src="/img/defects/create-defect-web.png"
+    alt="Create Defect"
+    style={{ width: '300px', cursor: 'zoom-in' }}
+  />
+
+</Zoom>
+
+    Navigate to **Defects**.
+    ### Step 2
+
+    <Zoom>
+    <img
+
+src="/img/defects/defect-web-2.png"
+alt="Step 2"
+style={{ width: '300px', cursor: 'zoom-in' }}
+/>
+    </Zoom>
+Click ** Create Defect**.
 
   </TabItem>
 
   <TabItem value="inspection" label="From Inspection">
 
-1. Complete an inspection.
-2. Mark an item as failed.
-3. Submit the inspection.
-4. A defect is automatically created.
+    1. Complete an inspection.
+    2. Mark an item as failed.
+    3. Submit the inspection.
+    4. A defect is automatically created.
 
   </TabItem>
   <TabItem value="mobile" label="Mobile">
-  1. Tap on + icon.
-  2. Add defect title, select customer, select asset. 
-  3. Tap on Submit.
+    1. Tap on + icon.
+    2. Add defect title, select customer, select asset. 
+    3. Tap on Submit.
   </TabItem>
 </Tabs>
 :::tip
