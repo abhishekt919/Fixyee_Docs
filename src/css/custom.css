@@ -31,3 +31,26 @@
 .navbar__title {
   margin-left: 10px; /* Adjust as needed */
 }
+
+/* Active TOC item */
+.table-of-contents__link--active {
+  color: #2563eb !important;
+  font-weight: 700;
+}
+
+/* Add left border */
+.table-of-contents__link--active::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: #2563eb;
+  border-radius: 2px;
+}
+
+/* Make TOC links relative */
+.table-of-contents__link {
+  position: relative;
+}

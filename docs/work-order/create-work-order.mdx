@@ -1,184 +1,199 @@
 ---
-title: Create a Work Order
+title: Manage teamspaces
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
-# Create a Work Order
+# Manage teamspaces
 
-Work Orders help you track repairs, maintenance work, inspection issues, PM services, parts, labor, mechanic time, and external repair details.
+<Zoom>
+    <img
+
+src="/img/workorder/manage_teamspaces.webp"
+alt="Step 2"
+style={{ width: '800px', cursor: 'zoom-in' }}
+/>
+    </Zoom>
 
 ## In this article
 
-- Create a manual Work Order
-- Create a Work Order from a defect
-- Create a Work Order from an inspection
-- Create a Work Order from PM service
-- Create an External Work Order using AI Scan
-- Create an External Work Order from forwarded email
-- Add parts, labor, misc charges, and mechanic time
-- Delete a Work Order
+Workspace owners can get an overview of all teamspaces in the workspace, modify their settings, and access additional management tools 🪂
 
 ---
 
-## Create a manual Work Order
+## Teamspace settings
 
-Use manual creation when you want to create a Work Order directly from the Work Orders page.
+Workspace owners can manage settings for all teamspaces in the workspace.
 
-<Tabs>
-  <TabItem value="web" label="Web" default>
+To manage teamspace settings:
 
-1. Navigate to **Work Orders**.
-2. Click **Create Work Order**.
-3. Select the customer and asset.
-4. If the work is planned for a future date, select the future **Date Created**.
-5. Add tasks and assign mechanics.
-6. Click **Save**.
+1. Go to your left sidebar and click **Settings**.
+2. Navigate to the **Teamspaces** tab.
 
-  </TabItem>
-
-  <TabItem value="mobile" label="Mobile">
-
-1. Open **Work Orders** from the mobile app.
-2. Tap the **+** icon.
-3. Select the customer and asset.
-4. Add task details and mechanics.
-5. Tap **Save**.
-
-  </TabItem>
-</Tabs>
-
-:::tip 
-<span style={{ color: '#2563eb', fontWeight: 'bold' }}>
-Future Work Orders
-</span>
-To create a Work Order for a future date, select a future **Date Created** while creating the Work Order.
-:::
-
----
-
-## Create a Work Order from a defect
-
-Use this option when a reported defect needs repair work.
-
-1. Navigate to **Defects**.
-2. Open the defect.
-3. Click **Create Work Order**.
-4. Review the defect details.
-5. Add tasks, parts, labor, or mechanic details if required.
-6. Click **Save**.
+There are also settings that can be configured at the teamspace level. Some of these settings are available on Enterprise workspaces only.
 
 :::info
-The defect will be linked with the Work Order for tracking and resolution.
+
+**Note:** 
+- In addition to workspace-wide settings, each teamspace has its own configurable settings. Refer to the **Intro to Teamspaces** article for more information.
+
 :::
 
 ---
 
-## Create a Work Order from an inspection
+## Manage default teamspaces
 
-A Work Order can be created from a failed inspection item.
+Workspace owners can designate default teamspaces. All current and new workspace members will automatically join these teamspaces.
 
-1. Navigate to **Inspections**.
-2. Open the inspection.
-3. Review the failed inspection item.
-4. Click **Create Work Order**.
-5. Review the inspection details.
-6. Click **Save**.
 
----
+- Search for and add any teamspace you own to the list of default teamspaces.
+- Click **Update** to save your changes.
 
-## Create a Work Order from PM service
+:::info
 
-Use this option when scheduled preventive maintenance is due.
+**Note:**
 
-1. Navigate to **PM Services**.
-2. Open the due PM service.
-3. Click **Create Work Order**.
-4. Review the service details.
-5. Assign mechanics if required.
-6. Click **Save**.
+- Turning a teamspace into a default teamspace automatically adds every workspace member to it.
+- Converting a default teamspace back into a regular teamspace removes all workspace members from it.
 
----
-
-## Create an External Work Order using AI Scan
-
-AI Scan helps create External Work Orders from uploaded or scanned documents.
-
-1. Navigate to **Work Orders**.
-2. Click **Scan Work Order**.
-3. Upload or scan the repair order, invoice, or Work Order document.
-4. Fixyee AI extracts the Work Order details.
-5. Review the extracted information.
-6. Click **Save**.
-
-:::tip 
-<span style={{ color: '#2563eb', fontWeight: 'bold' }}>
-AI Work Order Scan
-</span>
-AI Scan is used to create External Work Orders from uploaded or scanned repair documents.
 :::
 
----
+To remove a default teamspace:
 
-## Create an External Work Order from forwarded email
-
-You can forward vendor or repair shop emails to Fixyee to create External Work Orders.
-
-1. Forward the vendor or repair shop email to Fixyee.
-2. Fixyee reads the email content.
-3. The system creates an External Work Order automatically.
-4. Review the Work Order details.
-5. Save or update the Work Order if required.
+1. Click the **×** next to the teamspace name.
+2. Click **Update** to save your changes.
 
 :::tip
-<span style={{ color: '#2563eb', fontWeight: 'bold' }}> 
-Email-to-Work Order
-</span>
 
-Forwarded emails can automatically create External Work Orders and reduce manual data entry.
+Most workspaces only need one default teamspace. We recommend having no more than three default teamspaces, even in large organizations.
+
 :::
 
 ---
 
-## Add details to a Work Order
+## Manage teamspace creation
 
-A Work Order can include multiple cost and activity details.
+Choose who can create teamspaces within your workspace.
 
-### Tasks
+### Restrict teamspace creation
 
-Add one or more tasks to describe the work that needs to be completed.
+Enable **Limit teamspace creation to only workspace owners** to allow only workspace owners to create teamspaces.
 
-### Parts
+You can view workspace owners from the **Members** tab.
 
-Add multiple parts to a task and specify the quantity used.
+### Allow all members to create teamspaces
 
-### Labor
-
-Add labor entries to track work performed and labor costs.
-
-### Miscellaneous charges
-
-Add charges such as shop supplies, towing fees, disposal fees, or other service-related costs.
-
-### Mechanic time
-
-Assign mechanics and track the time spent by each mechanic on the Work Order.
-
-:::info
-A single Work Order can include multiple tasks, parts, labor entries, miscellaneous charges, and mechanic time records.
-:::
+Disable **Limit teamspace creation to only workspace owners** to allow any workspace member to create teamspaces.
 
 ---
 
-## Delete a Work Order
+## Manage existing teamspaces in your workspace
 
-1. Navigate to **Work Orders**.
-2. Locate the Work Order you want to delete.
-3. In the **Actions** column, click the **three-dot menu (⋮)**.
-4. Select **Delete**.
-5. Confirm the deletion.
+### View all existing teamspaces
+
+Within the Teamspaces settings page, you can view all teamspaces you have access to.
+
+The following information is displayed:
+
+#### Owners
+
+Owners of the teamspace.
+
+#### Members
+
+Members of the teamspace. Click the field to expand and view the full member list.
+
+#### Access
+
+Determines who can access the teamspace.
+
+- **Open** — Anyone can join and view the content in the teamspace.
+- **Closed** — Everyone can see that the teamspace exists, but they must be invited to join.
+- **Private** — Only members and owners can access or invite others. The teamspace is hidden from non-members.
+
+#### Updated
+
+Displays when the teamspace was last updated.
+
+Click the column header to sort teamspaces chronologically.
+
+You can also:
+
+- Search for teamspaces.
+- Create new teamspaces.
+- Filter by status (**Active** or **Archived**).
+- Filter by owner.
+- Filter by access level.
+
+---
+
+## Take ownership of a teamspace
+
+Workspace owners on the Enterprise plan can view, join, and take ownership of any teamspace.
+
+1. Go to your left sidebar and click **Settings**.
+2. Navigate to the **Teamspaces** tab.
+3. Click the **•••** menu on the right side of the teamspace row.
+4. Choose to join as a member or owner.
+
+---
+
+## Archive a teamspace
+
+Workspace owners can archive a teamspace.
+
+1. Hover over the teamspace name in the sidebar.
+2. Click the **•••** menu.
+3. Select **Archive teamspace**.
 
 :::warning
-Deleting a Work Order is permanent and cannot be undone.
+
+A teamspace can be archived but cannot be permanently deleted.
+
 :::
+
+---
+
+## Restore archived teamspaces
+
+Workspace owners who are also owners of a teamspace can restore archived teamspaces.
+
+1. Go to your left sidebar and click **Settings**.
+2. Navigate to the **Teamspaces** tab.
+3. Select the **Archived** filter.
+4. Click the **•••** menu next to the archived teamspace.
+5. Select **Restore teamspace**.
+
+The teamspace and all of its content will be restored for users who previously had access.
+
+---
+
+## Manage teamspaces without an owner
+
+If a teamspace does not have an owner, workspace owners can assign a new one.
+
+1. Go to your left sidebar and click **Settings**.
+2. Navigate to the **Teamspaces** tab.
+3. Use the **Owner** filter and select **Teamspaces with no owners**.
+4. Click the **•••** menu beside the teamspace.
+5. Assign a new owner.
+
+---
+
+## Video Tutorial
+
+<div style={{ margin: '24px 0' }}>
+  <iframe
+    width="100%"
+    height="450"
+    src="https://www.youtube.com/embed/rDCuVS0q7Rg"
+    title="Video Tutorial"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
