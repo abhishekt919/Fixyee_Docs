@@ -171,6 +171,7 @@ components:
       type: http
       scheme: bearer
       bearerFormat: JWT
+      description: Enter your JWT token in this format: Bearer <token>
 
   schemas:
     Unit:
