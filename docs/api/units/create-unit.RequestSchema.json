@@ -1,0 +1,1 @@
+{"title":"Body","body":{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["name","abbr"],"properties":{"name":{"type":"string","example":"Kilometer"},"abbr":{"type":"string","example":"km"}},"title":"CreateUnitRequest"},"example":{"name":"Kilometer","abbr":"km"}}}}}

@@ -4,7 +4,8 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
+
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -46,8 +47,9 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-  sidebarPath: './sidebars.js',
-},
+          sidebarPath: './sidebars.js',
+          docItemComponent: '@theme/ApiItem',
+        },
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -67,6 +69,26 @@ const config = {
           customCss: './src/css/custom.css',
         },
       }),
+    ],
+  ],
+  themes: ['docusaurus-theme-openapi-docs'],
+
+  plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'api',
+        docsPluginId: 'classic',
+        config: {
+          units: {
+            specPath: 'openapi/units.yaml',
+            outputDir: 'docs/api/units',
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+            },
+          },
+        },
+      },
     ],
   ],
 
@@ -92,9 +114,10 @@ const config = {
             label: 'Tutorial',
           },
           {
-            to: "/ApiReference",
-            label: "API Reference",
-            position: "left",
+            type: 'docSidebar',
+            sidebarId: 'apiSidebar',
+            position: 'left',
+            label: 'API Reference',
           }
           //{to: '/blog', label: 'Blog', position: 'left'},
         ],
@@ -150,5 +173,6 @@ const config = {
       },
     }),
 };
+
 
 export default config;

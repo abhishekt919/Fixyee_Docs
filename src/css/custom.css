@@ -54,3 +54,19 @@
 .table-of-contents__link {
   position: relative;
 }
+
+.openapi-method.get {
+  background: #10b981 !important;
+}
+
+.openapi-method.post {
+  background: #3b82f6 !important;
+}
+
+.openapi-method.put {
+  background: #f59e0b !important;
+}
+
+.openapi-method.delete {
+  background: #ef4444 !important;
+}

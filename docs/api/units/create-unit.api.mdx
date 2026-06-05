@@ -1,0 +1,76 @@
+---
+id: create-unit
+title: "Create Unit"
+description: "Creates a new measurement unit that can be used throughout the inventory and work order modules."
+sidebar_label: "Create Unit"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVU1v2zAM/SsCTx3gJe6wk2/d0A37ADa0GXZIcmBsLtZiSa5ENTUM//eBspMmG9YN2HGnmBL1SD4+Mj0wbgMUS/hiNQdYZ1BRKL1uWTsLBbz2hExBobK0V4YwRE+GLKtoNSuukVWJVm1IxUCV4tq7uK1dlDtS2t6TZec7hbZSe+d3yvmKvDKuig2F2cqu7PUDmrahUKzsc/VBN84Qk1cXO/NMTj7qZH1MxltsGmfVxRabWTq4xrJWF4RireyipjExi4aUiYFTZlbfRVJ7zbW2Ka/QBSYzW1nIwLXkUcp9V0EBZSpY2IAMApXRa+6gWPawIfTkryLXUCzXwzoDT3eRAr9yVQdFn0ztqYKCfaQMSmeZLMsVtm2jyxRl/j0Isz2EsiaD8sVdS1CA23ynUsI+Ai1BCoEMcLPx0p3WS7qsKcjDdPkIENhru4UMaGQUCjjSCcME8qT7zsAwZMCak/n6SMbNWKqgHL0P8U+CHGKMQALlKbTOhjHfF3kuP+cSE3g10l6pEMuSQvgWm6aDf6DwnKfAyDE8XfoUWSo0FAJu/8Dsb9OenUCIpI4gNppN4ugI8iLPT+m+HVFuJsp+IvtQxDHTk0SfyuYsmRQxNcYQ104U37qQGEMRNsyx1fP7y7lMUZiPiGkS/D35kAYh+gYKqJnbYj5vXIlN7QIXL/M8BxmLw9TcSnfGBpzOzpEPQRDo5AbF5ATZ9PHGeYMMBbz/ukiqlK7fPI7c9d/qMANtv7kUeCL6jX7oiFTaeerq8zvIQKob9Xg5y2e5vBJiDNqTAOM8qGk7nMm4f9Tq/7A0pxYyPfC8bVBbISwJo5+UtARstRB7CRkkNck8j3paZyCSEae+32CgL74ZBjm+i+Rl3a4zuEevcSP9Wq6HDGrCinwS4I46YXnk+/lCUhH3JkpKv+yJITu8uCpLavlJ3/XJYHz+dLsQNU7r3bhK3njcy4rGPRSQ/j3kdRJ5OuuhQbuN41SOmKJdPJf+T1JPVU1XaLuTDPt+9Fi4HdlhgGwqhcWGYT0Mww+ElavB
+sidebar_class_name: "post api-method"
+info_path: docs/api/units/fixyee-units-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Unit"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/v1/units/create"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new measurement unit that can be used throughout the inventory and work order modules.
+
+Examples:
+- Kilometer (km)
+- Liter (L)
+- Gallon (gal.)
+- Each (ea.)
+
+The unit name must be unique within the system.
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./create-unit.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./create-unit.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

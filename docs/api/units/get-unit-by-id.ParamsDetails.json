@@ -1,0 +1,1 @@
+{"parameters":[{"name":"id","in":"path","required":true,"description":"Unit ID","schema":{"type":"string"},"example":"63ed03b697045b476c35c280"}]}

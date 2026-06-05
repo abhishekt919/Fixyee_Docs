@@ -1,0 +1,248 @@
+openapi: 3.0.3
+info:
+  title: Fixyee Units API
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:4000
+
+tags:
+  - name: Units
+    description: Unit management APIs
+
+paths:
+  /api/v1/units/list:
+    get:
+      tags:
+        - Units
+      summary: Get Units List
+      description: Returns all units.
+      operationId: getUnitsList
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Data successfully retrieved
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UnitsListResponse"
+              example:
+                status: success
+                message: Data successfully retrieved.
+                messageId: 200
+                data:
+                  - _id: 63ed03b697045b476c35c280
+                    name: Quart
+                    abbr: qt.
+                    status: ACTIVE
+
+  /api/v1/units/create:
+    post:
+      tags:
+        - Units
+      summary: Create Unit
+      description: |
+        Creates a new measurement unit that can be used throughout the inventory and work order modules.
+
+        Examples:
+        - Kilometer (km)
+        - Liter (L)
+        - Gallon (gal.)
+        - Each (ea.)
+
+        The unit name must be unique within the system.
+      operationId: createUnit
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateUnitRequest"
+            example:
+              name: Kilometer
+              abbr: km
+      responses:
+        "200":
+          description: Unit created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessResponse"
+              example:
+                status: success
+                message: Unit created successfully.
+                messageId: 200
+
+  /api/v1/units/get/{id}:
+    get:
+      tags:
+        - Units
+      summary: Get Unit by ID
+      description: Returns unit details by ID.
+      operationId: getUnitById
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Unit ID
+          schema:
+            type: string
+          example: 63ed03b697045b476c35c280
+      responses:
+        "200":
+          description: Data successfully retrieved
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UnitResponse"
+              example:
+                status: success
+                message: Data successfully retrieved.
+                messageId: 200
+                data:
+                  _id: 63ed03b697045b476c35c280
+                  name: Quart
+                  abbr: qt.
+                  status: ACTIVE
+
+  /api/v1/units/active:
+    get:
+      tags:
+        - Units
+      summary: Get Active Units
+      description: Returns active units only.
+      operationId: getActiveUnits
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Data successfully retrieved
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UnitsListResponse"
+              example:
+                status: success
+                message: Data successfully retrieved.
+                messageId: 200
+                data:
+                  - _id: 63ed03b697045b476c35c280
+                    name: Quart
+                    abbr: qt.
+                    status: ACTIVE
+
+  /api/v1/units/delete/{id}:
+    delete:
+      tags:
+        - Units
+      summary: Delete Unit
+      description: Deletes a unit by ID.
+      operationId: deleteUnit
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Unit ID
+          schema:
+            type: string
+          example: 63ed03b697045b476c35c280
+      responses:
+        "200":
+          description: Unit deleted successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessResponse"
+              example:
+                status: success
+                message: Unit deleted successfully.
+                messageId: 200
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    Unit:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 63ed03b697045b476c35c280
+        name:
+          type: string
+          example: Quart
+        abbr:
+          type: string
+          example: qt.
+        status:
+          type: string
+          example: ACTIVE
+
+    CreateUnitRequest:
+      type: object
+      required:
+        - name
+        - abbr
+      properties:
+        name:
+          type: string
+          example: Kilometer
+        abbr:
+          type: string
+          example: km
+
+    SuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Unit created successfully.
+        messageId:
+          type: number
+          example: 200
+
+    UnitResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Data successfully retrieved.
+        messageId:
+          type: number
+          example: 200
+        data:
+          $ref: "#/components/schemas/Unit"
+
+    UnitsListResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Data successfully retrieved.
+        messageId:
+          type: number
+          example: 200
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/Unit"
