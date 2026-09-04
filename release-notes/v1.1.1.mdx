@@ -1,0 +1,140 @@
+---
+title: Version 1.1.1
+sidebar_label: v1.1.1 🆕
+sidebar_position: 0
+description: Release notes for Fixyee version 1.1.1
+---
+
+# 🚀 Release Notes - Version 1.1.1
+
+<div className="releaseMeta">
+  <span>📅 <strong>Release Date:</strong> 4 September 2026</span>
+  <span className="latestBadge">Latest Release</span>
+</div>
+
+<div className="releaseIntro">
+  <div className="releaseIntroIcon">✓</div>
+
+  <div>
+    <strong>What's New?</strong>
+    <p>
+      This release focuses on improving the Purchase Order workflow,
+      providing better visibility of PO types, and giving users more
+      control over Bill Reference updates during global PO uploads.
+    </p>
+  </div>
+</div>
+
+## ✨ New Features
+
+<details className="releaseFeature">
+  <summary>
+    <span className="featureIcon">📦</span>
+    <strong>Purchase Order</strong>
+    <span className="updateBadge">3 Updates</span>
+  </summary>
+
+  <div className="featureContent">
+
+    <div className="releaseItem">
+      <span>✓</span>
+      <div>
+        <strong>Improved Manual PO Completion Process</strong>
+        <p>
+          The Manual Purchase Order completion process has been improved
+          to provide a smoother and more consistent workflow for completing
+          and managing POs.
+        </p>
+      </div>
+    </div>
+
+    <div className="releaseItem">
+      <span>✓</span>
+      <div>
+        <strong>Added PO Type Badge</strong>
+        <p>
+          Added a PO Type badge to make it easier to identify and
+          distinguish between different types of Purchase Orders.
+        </p>
+      </div>
+    </div>
+
+    <div className="releaseItem">
+      <span>✓</span>
+      <div>
+        <strong>Improved Bill Reference Handling for Global PO Upload</strong>
+        <p>
+          Global PO uploads will no longer replace an existing Bill
+          Reference by default. A new checkbox has been added to give
+          users control over whether existing Bill References should
+          be replaced.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+## ⚡ Improvements
+
+<div className="releaseSection improvements">
+
+<ul>
+  <li>
+    Improved the Manual PO completion workflow for a more consistent
+    user experience.
+  </li>
+  <li>
+    Added clearer identification of PO types using badges.
+  </li>
+  <li>
+    Improved global PO upload handling to prevent unintended changes
+    to existing Bill References.
+  </li>
+</ul>
+
+</div>
+
+## 🧾 Bill Reference Update Control
+
+<div className="releaseSection">
+
+<p>
+  A new <strong>"Affect ALL EXISTING Bill Reference"</strong> checkbox
+  has been added to the global PO upload process.
+</p>
+
+<ul>
+  <li>
+    <strong>Checkbox unchecked:</strong> The uploaded PO reference will
+    only be applied where a Bill Reference does not already exist.
+    Existing Bill References will remain unchanged.
+  </li>
+  <li>
+    <strong>Checkbox checked:</strong> The uploaded PO reference will
+    replace the existing Bill Reference for all applicable records.
+  </li>
+</ul>
+
+:::info
+By default, existing Bill References are protected from being overwritten.
+Enable <strong>"Affect ALL EXISTING Bill Reference"</strong> when you
+want to replace existing Bill References.
+:::
+
+</div>
+
+## 🐞 Bug Fixes
+
+<div className="releaseSection bugFixes">
+
+<ul>
+  <li>
+    Fixed issues in the Manual PO completion workflow.
+  </li>
+  <li>
+    Fixed unintended Bill Reference replacement during global PO uploads.
+  </li>
+</ul>
+
+</div>

@@ -4,32 +4,32 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Comprehensive Documentation',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Explore step-by-step guides, feature documentation, and best practices
+        to help you get the most out of the Fixyee platform.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'API Reference',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Access detailed API documentation with request and response examples to
+        simplify integration with Fixyee services.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Release Notes',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Stay up to date with the latest features, enhancements, bug fixes, and
+        improvements released across the Fixyee platform.
       </>
     ),
   },

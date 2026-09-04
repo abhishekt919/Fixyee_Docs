@@ -12,7 +12,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Fixyee Documentation',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Comprehensive guides, API references, and release notes for Fixyee.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -90,8 +90,17 @@ const config = {
         },
       },
     ],
-  ],
 
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'releaseNotes',
+        path: 'release-notes',
+        routeBasePath: 'release-notes',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -107,67 +116,74 @@ const config = {
           src: 'img/fixyee.png',
         },
         items: [
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'Tutorial',
+          // },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'apiSidebar',
+          //   position: 'left',
+          //   label: 'API Reference',
+          // },
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            docsPluginId: 'releaseNotes',
+            sidebarId: 'releaseNotesSidebar',
+            label: 'Release Notes',
             position: 'left',
-            label: 'Tutorial',
           },
-          {
-            type: 'docSidebar',
-            sidebarId: 'apiSidebar',
-            position: 'left',
-            label: 'API Reference',
-          }
           //{to: '/blog', label: 'Blog', position: 'left'},
         ],
+
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        // links: [
+        //   {
+        //     title: 'Docs',
+        //     items: [
+        //       {
+        //         label: 'Tutorial',
+        //         to: '/docs/intro',
+        //       },
+        //     ],
+        //   },
+        //   {
+        //     title: 'Community',
+        //     items: [
+        //       {
+        //         label: 'Stack Overflow',
+        //         href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+        //       },
+        //       {
+        //         label: 'Discord',
+        //         href: 'https://discordapp.com/invite/docusaurus',
+        //       },
+        //       {
+        //         label: 'X',
+        //         href: 'https://x.com/docusaurus',
+        //       },
+        //     ],
+        //   },
+        //   {
+        //     title: 'More',
+        //     items: [
+        //       {
+        //         label: 'Blog',
+        //         to: '/blog',
+        //       },
+        //       {
+        //         label: 'GitHub',
+        //         href: 'https://github.com/facebook/docusaurus',
+        //       },
+        //     ],
+        //   },
+        // ],
+        copyright: `Copyright © ${new Date().getFullYear()} Fixyee Docs, Inc. Built with Docusaurus.`,
       },
-      
     }),
 };
 
